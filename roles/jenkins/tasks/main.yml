@@ -14,6 +14,11 @@
     enabled: no
     gpgcheck: yes
 
+- name: Uninstall Java 1.7
+  yum:
+    name: java-1.7.0-openjdk.x86_64
+    state: absent
+
 - name: Install Java 1.8
   yum:
     name: java-1.8.0-openjdk.x86_64

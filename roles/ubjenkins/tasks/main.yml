@@ -8,7 +8,7 @@
 
 - name: Add Jenkins repository
   apt_repository:
-    repo: http://pkg.jenkins.io/debian
+    repo: deb https://pkg.jenkins.io/debian binary/
     state: present
 
 - name: Install Jenkins

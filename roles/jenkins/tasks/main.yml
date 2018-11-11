@@ -1,5 +1,6 @@
 ---
 # tasks file for jenkins
+#
 
 - name: Import Jenkins GPG key
   rpm_key:

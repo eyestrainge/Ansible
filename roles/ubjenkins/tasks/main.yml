@@ -1,0 +1,23 @@
+---
+# tasks file for ubjenkins
+
+- name: Import Jenkins GPG key
+  apt_key:
+    state: present
+    url: http://pkg.jenkins-ci.org/debian/jenkins-ci.org.key
+
+- name: Add Jenkins repository
+  apt_repository:
+    repo: http://pkg.jenkins.io/debian
+    state: present
+
+- name: Install Jenkins
+  apt:
+    name: jenkins
+    state: present
+
+- name: Start Jenkins
+  service:
+    name: jenkins
+    enabled: yes
+    state: started

@@ -1,0 +1,10 @@
+---
+# tasks file for ubnodejs
+
+- name: Installing node and npm
+  apt:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - nodejs
+    - npm

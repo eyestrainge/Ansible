@@ -100,7 +100,7 @@ def install_pacakge(source, pkg_type):
 def main():
     module = AnsibleModule(
         argument_spec = dict(
-            enabled   = dict(required=True, choices=BOOLEANS) # TODO actually use this
+            enabled   = dict(required=True, choices="yes") # TODO actually use this
         )
     )
 
